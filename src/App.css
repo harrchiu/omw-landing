@@ -2,6 +2,12 @@ html, body {
   height: 100%;
   margin: 0;
   background-color: #3ee3cf;
+  font-family: 'Inter';
+}
+
+::selection {
+  background-color: #fff; /* Highlight background color (e.g., Tomato color) */
+  color: #000; /* Text color when highlighted */
 }
 
 .App {
@@ -12,14 +18,22 @@ html, body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: #3ee3cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ScreenContainer {
+  width: auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  max-width: 100rem;
 }
 
 .HeaderBoxContainer {
   width: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
   height: auto;
   display: flex;
   justify-content: center;
@@ -34,6 +48,12 @@ html, body {
   min-width: 320px;
 }
 
+.HeaderRightSection {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .Logo {
   height: 40px;
 }
@@ -44,8 +64,8 @@ html, body {
   border-radius: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 
   display: flex;
   justify-content: center;
@@ -69,8 +89,6 @@ html, body {
   width: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
   height: auto;
   display: flex;
   justify-content: center;
@@ -89,6 +107,7 @@ html, body {
   flex-direction: column;
   gap: 4rem;
   padding-right: 2rem;
+  align-items: flex-start;
 }
 
 .ImageHolder {
@@ -97,12 +116,42 @@ html, body {
   flex: 4;
 }
 
+.InsideImageHolder {
+  position: relative;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50rem); /* Start position below */
+  animation: slideUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  margin-top: -50px;
+  max-width: max-content;
+}
+
+
 .ContentImage {
-  height: 20rem;
+  height: 45rem;
   object-fit: contain;
   position: relative;
-  right: 0;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+  background-color: transparent;
+  max-width: 100%;
 }
+
+.FloatingProfilePictureImage {
+  object-fit: contain;
+  position: absolute;
+  border-radius: 100%;
+  border-width: 4px;
+  border-color: #3ee3cf;
+  border-style: solid;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.5s ease-out; /* Smooth hover effect */
+}
+
+.FloatingProfilePictureImage:hover {
+  animation: none; /* Stops animation on hover */
+  transform: translateY(-10px); /* Resets position */
+}
+
 
 .ContentTitle {
   font-family: 'Inter';
@@ -115,20 +164,31 @@ html, body {
   font-family: 'Inter';
   font-weight: 700;
   font-size: 2rem;
+  line-height: 2.75rem;
   animation: fadeInDelayed 2s forwards; /* Apply the animation */
 
 }
 
+.DownloadFromHolder {
+  display: flex;
+  gap: 2rem;
+}
+
 .DownloadFromButton {
-  height: 4rem;
+  height: 3rem;
   object-fit: contain;
 }
 
 .Footer {
   color: #000;
-  padding: 2rem;
   padding-top: 8rem;
   text-align: center;
+
+  width: auto;
+  padding-bottom: 4rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .FooterContent {
@@ -185,6 +245,29 @@ html, body {
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .HeaderBoxContainer {
     margin-right: 2rem;
@@ -213,5 +296,21 @@ html, body {
 
   .ContentDescription {
     font-size: 1.5rem;
+  }
+
+  .ContentImage {
+    height: 35rem;
+  }
+
+  .ImageHolder {
+    justify-content: center;
+  }
+
+  .InsideImageHolder {
+    margin: 0;
+  }
+
+  .FloatingProfilePictureImage {
+    border-width: 3px;
   }
 }
