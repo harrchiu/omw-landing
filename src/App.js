@@ -1,53 +1,97 @@
+import react, {useState, useEffect} from 'react';
 import logo from './logo.png';
+import mainImage1 from './Onboarding1.png'
+import mainImage2 from './Onboarding2.png'
+import mainImage3 from './Onboarding3.png'
+import downloadAppStore from "./DownloadAppStore.webp"
 import './App.css';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth <= 768) { // You can adjust the value for mobile breakpoints
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  })
+
+  const gotoIOSDownload = () => {
+    // Add link to ios store
+  }
+
+  const GoToIOSButton = () => {
+    return (
+      <div className="GetAppButton" onClick={gotoIOSDownload}>
+        Get the App
+      </div>
+    )
+  }
+
+  const ContentBox = () => {
+    if(isMobile) return (
+      <div className="ContentBoxContainer">
+        <div className="ContentBox">
+          <div className="ContentColumn">
+            <div className="ContentTitle">
+              See what's happening near you.
+            </div>
+            <div className="ImageHolder">
+              <img src={mainImage3}  className="ContentImage"/>
+            </div>
+            <div className="ContentDescription">
+              Check where your friends are. <br/>
+              Join the excitement. <br/>
+            </div>
+            <GoToIOSButton/>
+          </div>
+        </div>
+      </div>
+    )
+    return (
+      <div className="ContentBoxContainer">
+        <div className="ContentBox">
+          <div className="ContentColumn">
+            <div className="ContentTitle">
+              See what's happening near you.
+            </div>
+            <div className="ContentDescription">
+              Check where your friends are. <br/>
+              Join the excitement. <br/>
+            </div>
+            <GoToIOSButton/>
+          </div>
+          <div className="ImageHolder">
+            <img src={mainImage3}  className="ContentImage"/>
+          </div>
+
+        </div>
+      </div>
+    )
+  }
+
+
   return (
     <div className="App">
       <div className="BackgroundBox">
         <div className="HeaderBoxContainer">
           <div className="HeaderBox">
             <img src={logo} className="Logo"/>
-            <div className="GetAppButton">
-              Get the App
-            </div>
+            <GoToIOSButton/>
           </div>
         </div>
-        <div className="ContentBoxContainer">
-          <div className="ContentBox">
-            <div className="ContentColumn">
-              <div className="ContentTitle">
-                See what's happening near you.
-              </div>
-              <div className="ContentSubTitle">
-              </div>
-              <div className="ContentDescription">
-                Check what your friends are up to. See where the fun is. 
-              </div>
-              <div className="GetAppButton">
-                Get the App
-              </div>
-            </div>
-            <div className="ContentImage">
-
-            </div>
-          </div>
-        </div>
+        <ContentBox/>
       </div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }

@@ -1,11 +1,11 @@
 html, body {
   height: 100%;
   margin: 0;
+  background-color: #3ee3cf;
 }
 
 .App {
   text-align: center;
-  background-color: #3ee3cf;
 }
 
 .BackgroundBox {
@@ -31,6 +31,7 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-width: 320px;
 }
 
 .Logo {
@@ -53,8 +54,15 @@ html, body {
   font-family: 'Inter';
   font-weight: 700;
 
-  max-width: 120px;
+  max-width: 100px;
 
+  cursor: pointer;
+}
+
+.GetAppButton:hover {
+  background-color: #000000;
+  color: white;
+  transition: all 0.2s;
 }
 
 .ContentBoxContainer {
@@ -70,6 +78,8 @@ html, body {
 
 .ContentBox { 
   display: flex;
+  width: 80vw;
+  min-width: 320px;
 }
 
 .ContentColumn {
@@ -77,21 +87,92 @@ html, body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
+  padding-right: 2rem;
+}
+
+.ImageHolder {
+  display: flex;
+  justify-content: flex-end;
+  flex: 4;
 }
 
 .ContentImage {
-  flex: 4;
+  height: 20rem;
+  object-fit: contain;
+  position: relative;
+  right: 0;
 }
 
 .ContentTitle {
   font-family: 'Inter';
   font-weight: 700;
   font-size: 4rem;
+  animation: fadeIn 1s forwards; /* Apply the animation */
 }
 
 .ContentDescription {
   font-family: 'Inter';
   font-weight: 700;
   font-size: 2rem;
+  animation: fadeInDelayed 2s forwards; /* Apply the animation */
+
+}
+
+.DownloadFromButton {
+  height: 4rem;
+  object-fit: contain;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start fully transparent */
+  }
+  100% {
+    opacity: 1; /* End fully visible */
+  }
+}
+
+@keyframes fadeInDelayed {
+  0% {
+    opacity: 0; /* Start fully transparent */
+  }
+  50% {
+    opacity: 0; /* Stay fully transparent */
+  }
+  100% {
+    opacity: 1; /* End fully visible */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderBoxContainer {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .HeaderBox {
+    width: 100%;
+  }
+
+  .ContentBoxContainer {
+    padding-top: 2rem;
+  }
+
+  .ContentColumn {
+    text-align: center;
+    padding-right: 0;
+    gap: 2rem;
+    align-items: center;
+  }
+  .ContentTitle {
+    font-size: 2rem;
+  }
+
+  .ContentDescription {
+    font-size: 1.5rem;
+  }
 }
