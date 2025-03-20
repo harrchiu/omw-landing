@@ -1,11 +1,11 @@
-import react, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from './images/logo.png';
 import phoneImage from './images/phone.png'
 import profile1 from './images/profile1.jpeg'
 import profile2 from './images/profile2.jpeg'
 import profile3  from './images/profile3.jpeg'
 import downloadAppStore from "./images/DownloadAppStore.webp"
-import downloadGPStore from "./images/DownloadGPStore.png"
+// import downloadGPStore from "./images/DownloadGPStore.png"
 
 import './App.css';
 
@@ -28,10 +28,6 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   })
-
-  const gotoIOSDownload = () => {
-    // Add link to ios store
-  }
 
   const GoToIOSButton = () => {
     return (
