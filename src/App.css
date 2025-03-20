@@ -1,38 +1,97 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: #3ee3cf;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.BackgroundBox {
   min-height: 100vh;
+  min-width: 100vw;
+  background-color: #3ee3cf;
+}
+
+.HeaderBoxContainer {
+  width: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.HeaderBox {
+  height: auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Logo {
+  height: 40px;
+}
+
+.GetAppButton {
+  height: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Inter';
+  font-weight: 700;
+
+  max-width: 120px;
+
+}
+
+.ContentBoxContainer {
+  width: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ContentBox { 
+  display: flex;
+}
+
+.ContentColumn {
+  flex: 6;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.ContentImage {
+  flex: 4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ContentTitle {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.ContentDescription {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 2rem;
 }
