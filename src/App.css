@@ -122,7 +122,46 @@ html, body {
 .DownloadFromButton {
   height: 4rem;
   object-fit: contain;
+}
 
+.Footer {
+  color: #000;
+  padding: 2rem;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.FooterContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Footer p {
+  font-size: 12px;
+}
+
+.FooterLinks {
+  list-style: none;
+  padding: 0;
+}
+
+.FooterLinks li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.FooterLinks a {
+  color: #000;
+  text-decoration: none;
+}
+
+.FooterLinks a:hover {
+  text-decoration: underline;
 }
 
 @keyframes fadeIn {

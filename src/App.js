@@ -91,6 +91,16 @@ function App() {
           </div>
         </div>
         <ContentBox/>
+        <footer className="Footer">
+          <div className="FooterContent">
+            <p>&copy; 2025 OnMyWay. All rights reserved.</p>
+            {/* <ul className="FooterLinks">
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul> */}
+          </div>
+        </footer>
       </div>
     </div>
   );
