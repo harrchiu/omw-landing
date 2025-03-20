@@ -35,9 +35,10 @@ function App() {
 
   const GoToIOSButton = () => {
     return (
-      <div className="GetAppButton" onClick={gotoIOSDownload}>
+      <a href="https://apps.apple.com/ca/app/omw/id6743134330" target="_none" className="GetAppButton">
         Get the App
-      </div>
+      </a>
+
     )
   }
 
@@ -89,7 +90,7 @@ function App() {
               Join the excitement. <br/>
             </div>
               <img src={downloadAppStore} className="DownloadFromButton"/>
-              <img src={downloadGPStore} className="DownloadFromButton"/>
+              {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
           </div>
         </div>
       </div>
@@ -107,7 +108,7 @@ function App() {
             </div>
             <div className="DownloadFromHolder">
               <img src={downloadAppStore} className="DownloadFromButton"/>
-              <img src={downloadGPStore} className="DownloadFromButton"/>
+              {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
             </div>
           </div>
           <PhoneImage/>

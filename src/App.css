@@ -77,6 +77,9 @@ html, body {
   max-width: 100px;
 
   cursor: pointer;
+
+  color: #000;
+  text-decoration: none;
 }
 
 .GetAppButton:hover {
