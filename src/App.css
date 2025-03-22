@@ -1,8 +1,10 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   background-color: #3ee3cf;
   font-family: 'Inter';
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -15,8 +17,10 @@ html, body {
 }
 
 .BackgroundBox {
+  overflow-x: hidden;
+
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
   background-color: #3ee3cf;
   display: flex;
   justify-content: center;
@@ -36,16 +40,7 @@ html, body {
   padding-bottom: 4rem;
   height: auto;
   display: flex;
-  justify-content: center;
-}
-
-.HeaderBox {
-  height: auto;
-  width: 80vw;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  min-width: 320px;
 }
 
 .HeaderRightSection {
@@ -97,7 +92,7 @@ html, body {
   justify-content: center;
 }
 
-.ContentBox { 
+.ContentBox {
   display: flex;
   width: 80vw;
   min-width: 320px;
@@ -109,7 +104,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
   align-items: flex-start;
 }
 
@@ -127,7 +122,6 @@ html, body {
   margin-top: -50px;
   max-width: max-content;
 }
-
 
 .ContentImage {
   height: 45rem;
@@ -155,9 +149,9 @@ html, body {
   transform: translateY(-10px); /* Resets position */
 }
 
-
 .ContentTitle {
   font-family: 'Inter';
+  font-style: italic;
   font-weight: 700;
   font-size: 4rem;
   animation: fadeIn 1s forwards; /* Apply the animation */
@@ -169,7 +163,6 @@ html, body {
   font-size: 2rem;
   line-height: 2.75rem;
   animation: fadeInDelayed 2s forwards; /* Apply the animation */
-
 }
 
 .DownloadFromHolder {
@@ -273,14 +266,17 @@ html, body {
 
 @media screen and (max-width: 768px) {
   .HeaderBoxContainer {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    height: 30px;
   }
-
-  .HeaderBox {
-    width: 100%;
+  .Logo {
+    height: 100%;
+  }
+  .GetAppButton {
+    height: 100%;
   }
 
   .ContentBoxContainer {
@@ -289,16 +285,17 @@ html, body {
 
   .ContentColumn {
     text-align: center;
-    padding-right: 0;
+    margin: 0 1.5rem;
     gap: 2rem;
     align-items: center;
   }
   .ContentTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .ContentDescription {
     font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .ContentImage {
