@@ -131,6 +131,7 @@ function App() {
           <footer className='Footer'>
             <div className='FooterContent'>
               <p>&copy; 2025 OnMyWay. All rights reserved.</p>
+              <a href='https://sites.google.com/view/omwterms/privacy'>Privacy</a>
               {/* <ul className="FooterLinks">
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/services">Services</a></li>

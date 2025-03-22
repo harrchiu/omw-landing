@@ -177,7 +177,7 @@ body {
 
 .Footer {
   color: #000;
-  padding-top: 8rem;
+  padding-top: 1rem;
   text-align: center;
 
   width: auto;
@@ -188,13 +188,14 @@ body {
 }
 
 .FooterContent {
+  font-size: 12px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .Footer p {

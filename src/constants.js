@@ -1,4 +1,4 @@
-export const IOS_URL = 'https://itunes.apple.com/us/app/apple-store/id1234567890?mt=8';
+export const IOS_URL = 'https://apps.apple.com/app/omw/id6743134330';
 export const ANDROID_URL = 'https://play.google.com/store/';
 
 export const getDownloadUrl = () => {
