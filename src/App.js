@@ -91,7 +91,9 @@ function App() {
                 <br />
                 Join the excitement. <br />
               </div>
-              <img src={downloadAppStore} className='DownloadFromButton' />
+              <a href={IOS_URL}>
+                <img src={downloadAppStore} className='DownloadFromButton' />
+              </a>
               {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
             </div>
           </div>
@@ -107,7 +109,9 @@ function App() {
               Join the excitement. <br />
             </div>
             <div className='DownloadFromHolder'>
-              <img src={downloadAppStore} className='DownloadFromButton' />
+              <a href={IOS_URL}>
+                <img src={downloadAppStore} className='DownloadFromButton' />
+              </a>
               {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
             </div>
           </div>

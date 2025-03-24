@@ -96,6 +96,7 @@ body {
   display: flex;
   width: 80vw;
   min-width: 320px;
+  gap: 4rem;
 }
 
 .ContentColumn {
