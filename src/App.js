@@ -5,9 +5,10 @@ import profile1 from './images/profile1.jpeg';
 import profile2 from './images/profile2.jpeg';
 import profile3 from './images/profile3.jpeg';
 import downloadAppStore from './images/DownloadAppStore.webp';
+import downloadGPStore from './images/DownloadGPStore.png';
 
 import './App.css';
-import { getDownloadUrl, IOS_URL } from './constants';
+import { ANDROID_URL, getDownloadUrl, IOS_URL } from './constants';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,7 +33,7 @@ function App() {
 
   const GoToIOSButton = () => {
     return (
-      <a href={IOS_URL} target='_none' className='GetAppButton'>
+      <a href={getDownloadUrl()} target='_none' className='GetAppButton'>
         Get the App
       </a>
     );
@@ -94,7 +95,9 @@ function App() {
               <a href={IOS_URL}>
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
-              {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
+              <a href={ANDROID_URL}>
+                <img src={downloadGPStore} className='DownloadFromButton' />
+              </a>
             </div>
           </div>
         </div>
@@ -112,7 +115,9 @@ function App() {
               <a href={IOS_URL}>
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
-              {/* <img src={downloadGPStore} className="DownloadFromButton"/> */}
+              <a href={ANDROID_URL}>
+                <img src={downloadGPStore} className='DownloadFromButton' />
+              </a>
             </div>
           </div>
           <PhoneImage />
