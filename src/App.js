@@ -95,6 +95,15 @@ function App() {
               <a href={IOS_URL}>
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
+              <br />
+              <div>
+                <a href='https://docs.google.com/forms/d/1f0d2ygTXDc7IfIhpU57OwB3KLVCuzHcfAZ7UycdSF30/edit'>
+                  Click here FIRST to sign up for Android Early Access
+                </a>
+                <br />
+                <br />
+                (or contact harrchiu@gmail.com)
+              </div>
               <a href={ANDROID_URL}>
                 <img src={downloadGPStore} className='DownloadFromButton' />
               </a>
