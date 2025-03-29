@@ -34,7 +34,7 @@ function App() {
   const GoToIOSButton = () => {
     return (
       <a href={getDownloadUrl()} target='_none' className='GetAppButton'>
-        Get the App
+        Get iOS App
       </a>
     );
   };
@@ -98,8 +98,9 @@ function App() {
               <br />
               <div>
                 <a href='https://docs.google.com/forms/d/1f0d2ygTXDc7IfIhpU57OwB3KLVCuzHcfAZ7UycdSF30/edit'>
-                  Click here FIRST to sign up for Android Early Access
-                </a>
+                  Click here first
+                </a>{' '}
+                to sign up for Android Early Access
                 <br />
                 <br />
                 (or contact harrchiu@gmail.com)
@@ -124,6 +125,14 @@ function App() {
               <a href={IOS_URL}>
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
+              <div>
+                <a href='https://docs.google.com/forms/d/1f0d2ygTXDc7IfIhpU57OwB3KLVCuzHcfAZ7UycdSF30/edit'>
+                  Click here first
+                </a>{' '}
+                to sign up for Android Early Access
+                <br />
+                (or contact harrchiu@gmail.com)
+              </div>
               <a href={ANDROID_URL}>
                 <img src={downloadGPStore} className='DownloadFromButton' />
               </a>
