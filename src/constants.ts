@@ -5,14 +5,15 @@ export const IOS_URL = 'https://apps.apple.com/app/omw/id6743134330';
 export const ANDROID_URL = 'https://play.google.com/apps/testing/com.toasterteam.toasterteamapp';
 
 function getMobileOS() {
+  // @ts-ignore
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  console.log('hi', userAgent);
 
   if (/android/i.test(userAgent)) {
     return 'Android';
   }
 
   // iOS detection from iPhone, iPad, or iPod
+  // @ts-ignore
   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     return 'iOS';
   }
@@ -32,3 +33,10 @@ export const getDownloadUrl = () => {
     return IOS_URL;
   }
 };
+
+export const BACKEND_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://toasterteamapp.onrender.com'
+    : 'http://localhost:3000';
+
+export const HOME_URL = 'https://getomw.app';
