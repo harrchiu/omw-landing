@@ -196,7 +196,7 @@ const PublicEventPage = () => {
             <div
               style={{ display: 'flex', gap: '12px', cursor: 'pointer' }}
               onClick={() => {
-                const shareUrl = `https://getomw.app/${event.shortWebUrlCode}`;
+                const shareUrl = `https://getomw.app/event/${event.shortWebUrlCode}`;
                 // simplest approach on web:
                 navigator.clipboard.writeText(shareUrl).then(() => {
                   window.alert(`Event link copied to clipboard!`);
