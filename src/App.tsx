@@ -96,7 +96,7 @@ function App() {
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
               <br />
-              <div>
+              {/* <div>
                 <a href='https://docs.google.com/forms/d/1f0d2ygTXDc7IfIhpU57OwB3KLVCuzHcfAZ7UycdSF30/edit'>
                   Click here first
                 </a>{' '}
@@ -104,7 +104,7 @@ function App() {
                 <br />
                 <br />
                 (or contact harrchiu@gmail.com)
-              </div>
+              </div> */}
               <a href={ANDROID_URL}>
                 <img src={downloadGPStore} className='DownloadFromButton' />
               </a>
@@ -125,14 +125,14 @@ function App() {
               <a href={IOS_URL}>
                 <img src={downloadAppStore} className='DownloadFromButton' />
               </a>
-              <div>
+              {/* <div>
                 <a href='https://docs.google.com/forms/d/1f0d2ygTXDc7IfIhpU57OwB3KLVCuzHcfAZ7UycdSF30/edit'>
                   Click here first
                 </a>{' '}
                 to sign up for Android Early Access
                 <br />
                 (or contact harrchiu@gmail.com)
-              </div>
+              </div> */}
               <a href={ANDROID_URL}>
                 <img src={downloadGPStore} className='DownloadFromButton' />
               </a>
