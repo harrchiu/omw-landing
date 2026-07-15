@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
-import { BACKEND_URL } from '../constants';
+import { BACKEND_URL, HOME_URL } from '../constants';
 import { IEvent } from '../types';
 import {
   currentEventStatus,
@@ -78,11 +78,11 @@ const openGoogleCalendar = async (event: IEvent) => {
     : `omw! Event`;
 
   const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    titleText
+    titleText,
   )}&description=${encodeURIComponent(
-    event.title
+    event.title,
   )}&dates=${startDateString}/${endDateString}&location=${encodeURIComponent(
-    event.location?.address || ''
+    event.location?.address || '',
   )}`;
 
   window.open(gcalUrl, '_blank');
@@ -96,7 +96,7 @@ const openInMapsUrl = (event) => {
 };
 
 const openInOmwApp = () => {
-  window.open('https://getomw.app', '_blank');
+  window.open(HOME_URL, '_blank');
 };
 
 const PublicEventPage = () => {
@@ -196,7 +196,7 @@ const PublicEventPage = () => {
             <div
               style={{ display: 'flex', gap: '12px', cursor: 'pointer' }}
               onClick={() => {
-                const shareUrl = `https://getomw.app/event/${event.shortWebUrlCode}`;
+                const shareUrl = `${HOME_URL}/event/${event.shortWebUrlCode}`;
                 // simplest approach on web:
                 navigator.clipboard.writeText(shareUrl).then(() => {
                   window.alert(`Event link copied to clipboard!`);

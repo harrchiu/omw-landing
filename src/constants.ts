@@ -43,4 +43,4 @@ export const BACKEND_URL =
     ? 'https://toasterteamapp.onrender.com'
     : 'http://localhost:3000';
 
-export const HOME_URL = 'https://getomw.app';
+export const HOME_URL = 'https://harrchiu.github.io/omw';
